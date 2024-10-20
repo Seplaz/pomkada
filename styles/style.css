@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 24px;
+  color: #333;
+  font-family: "Neue Machina Regular";
+  min-inline-size: 100vw;
+  min-block-size: 100dvh;
+  background: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-text {
+  user-select: none;
+  font-weight: 800;
+  font-size: 48px;
+}
+
+.header__menu-list {
+  display: flex;
+  gap: 24px;
+}
+
+.button {
+  border-style: none;
+  border-radius: 12px;
+  padding: 18px 24px;
+  font-size: 24px;
+  background-color: #cafe64;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  color: #cafe64;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.content__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  font-family: "Inter";
+}
+
+.description__title {
+  font-size: 48px;
+}
+
+.description__text {
+  font-size: 24px;
+}

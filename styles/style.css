@@ -32,25 +32,18 @@
   background: var(--black);
 }
 
+.logo {
+  color: var(--white);
+  font-size: 48px;
+
+}
+
 .header__menu-list {
   display: flex;
   gap: 24px;
 }
 
-.button {
-  border-style: none;
-  border-radius: 12px;
-  padding: 18px 24px;
-  color: var(--black);
-  font-size: 24px;
-  background-color: var(--lightgreen);
-  transition: background-color 0.2s ease-in-out;
-}
 
-.button:hover {
-  background-color: var(--white);
-  cursor: pointer;
-}
 
 .main {
   display: flex;

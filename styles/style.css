@@ -5,6 +5,7 @@
   --white: #ffffff;
   --gray: #f5f5f5;
   --lightgreen: #cafe64;
+  --lightgreen-2: #d5fc7b;
   --yellow: #fff491;
   --red: #fb4e4e;
   --green: #56f1aa;
@@ -19,7 +20,7 @@
   gap: 48px;
   color: #333;
   font-family: "Neue Machina Regular";
-  background: var(--gray);
+  background-color: var(--gray);
   min-inline-size: 100vw;
   min-block-size: 100dvh;
 }
@@ -29,28 +30,76 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  background: var(--black);
+  background-color: var(--black);
 }
 
 .logo {
   color: var(--white);
   font-size: 48px;
-
 }
-
-.header__menu-list {
-  display: flex;
-  gap: 24px;
-}
-
-
 
 .main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 24px;
+  padding: 24px;
 }
 
+.hero__header {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--black);
+  border-radius: 12px 12px 0 0;
+}
+
+.hero__header-circle {
+  inline-size: 18px;
+  block-size: 18px;
+  border-radius: 100%;
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.hero__main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  background-color: var(--lightgreen-2);
+  border-radius: 0 0 12px 12px;
+}
+
+.hero__main-subtitle {
+  font-family: "Inter", sans-serif;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  border-radius: 12px;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+.content__subtitle {
+  font-family: "Inter", sans-serif;
+}
 
 .footer {
   display: flex;
@@ -59,5 +108,24 @@
   padding: 24px;
   color: var(--white);
   font-size: 48px;
-  background: var(--black);
+  background-color: var(--black);
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: center;
+    padding: 24px;
+  }
+
+  .logo {
+    font-size: 48px;
+  }
+
+  .hero__header-circle {
+    inline-size: 18px;
+    block-size: 18px;
+  }
+  .footer {
+    font-size: 24px;
+  }
 }

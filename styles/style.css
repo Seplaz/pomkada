@@ -13,13 +13,45 @@
   --orange: #f89439;
 }
 
+.red__color {
+  background-color: var(--red);
+}
+
+.yellow__color {
+  background-color: var(--yellow);
+}
+
+.green__color {
+  background-color: var(--green);
+}
+
+.blue__color {
+  background-color: var(--blue);
+}
+
+.black__color {
+  background-color: var(--black);
+}
+
+.orange__color {
+  background-color: var(--orange);
+}
+
+.black__text-color {
+  color: var(--black);
+}
+
+.white__text-color {
+  color: var(--white);
+}
+
 .page {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 48px;
-  color: #333;
-  font-family: "Neue Machina Regular";
+  gap: 20px;
+  color: var(--black);
+  font-family: "Neue Machina Regular", serif;
   background-color: var(--gray);
   min-inline-size: 100vw;
   min-block-size: 100dvh;
@@ -29,104 +61,125 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 20px;
   background-color: var(--black);
 }
 
 .logo {
-  color: var(--white);
-  font-size: 48px;
-  font-weight: 800;
+  display: flex;
+  align-items: center;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  padding: 24px;
+  gap: 20px;
+  padding: 20px;
 }
 
 .hero__header {
   display: flex;
-  padding: 12px;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
   background-color: var(--black);
-  border-radius: 12px 12px 0 0;
 }
 
 .hero__header-circle {
-  inline-size: 18px;
-  block-size: 18px;
   border-radius: 100%;
+  inline-size: 15px;
+  block-size: 15px;
 }
 
-.red {
-  background-color: var(--red);
-}
-
-.yellow {
-  background-color: var(--yellow);
-}
-
-.green {
-  background-color: var(--green);
-}
-
-.hero__main {
+.hero__content {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 24px;
+  gap: 20px;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  overflow: hidden;
   background-color: var(--lightgreen-2);
-  border-radius: 0 0 12px 12px;
+  inline-size: 768px;
 }
 
-.hero__main-subtitle {
+.hero__content-title {
+  font-family: "Neue Machina Ultrabold", serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.hero__content-subtitle {
   font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-wrap: pretty;
+}
+
+.hero__content-image {
+  position: relative;
+  top: 25px;
+  inline-size: 100%;
 }
 
 .main__content {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 24px;
-  border-radius: 12px;
-  color: var(--white);
-  background-color: var(--blue);
+  gap: 20px;
 }
 
-.content__subtitle {
+.content__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  inline-size: 768px;
+}
+
+.card__title {
+  font-family: "Neue Machina Ultrabold", serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.card__subtitle {
   font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-wrap: pretty;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  gap: 20px;
+  padding: 20px;
   color: var(--white);
-  font-size: 48px;
+  font-size: 40px;
   background-color: var(--black);
 }
 
 @media screen and (max-width: 768px) {
   .header {
     justify-content: center;
-    padding: 24px;
+    align-items: center;
+    padding: 20px;
   }
 
-  .logo {
-    font-size: 48px;
+  .hero__content {
+    inline-size: 100%;
   }
 
-  .hero__header-circle {
-    inline-size: 18px;
-    block-size: 18px;
+  .content__card {
+    inline-size: 100%;
   }
+
   .footer {
-    font-size: 24px;
+    font-size: 20px;
   }
 }

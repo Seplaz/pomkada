@@ -166,6 +166,11 @@
   font-size: 40px;
 }
 
+.card__image {
+  border-radius: 10px;
+  inline-size: 100%;
+}
+
 .card__subtitle {
   font-family: "Inter", sans-serif;
   font-weight: 400;

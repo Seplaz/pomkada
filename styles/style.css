@@ -140,7 +140,12 @@
   text-wrap: pretty;
 }
 
-.hero__content-image {
+.pomkada__image {
+  border-radius: 10px;
+  inline-size: 100%;
+}
+
+.cat__image {
   position: relative;
   top: 25px;
   inline-size: 100%;
@@ -176,6 +181,13 @@
   font-weight: 400;
   font-size: 20px;
   text-wrap: pretty;
+}
+
+.accent {
+  font-style: italic;
+  font-size: 15px;
+  opacity: .6;
+  font-weight: 200;
 }
 
 .footer {
@@ -227,6 +239,10 @@
 
   .card__subtitle {
     font-size: 15px;
+  }
+
+  .accent {
+    font-size: 10px;
   }
 
   .footer {

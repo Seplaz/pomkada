@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  --black: #333333;
+  /* --black: #333333;
   --white: #ffffff;
   --gray: #f5f5f5;
   --lightgreen: #cafe64;
@@ -10,39 +10,44 @@
   --red: #fb4e4e;
   --green: #56f1aa;
   --blue: #0a56fd;
-  --orange: #f89439;
+  --orange: #f89439; */
+
+  --primary-color: #333333;
+  --secondary-color: #ffffff;
+  --tertiary-color: #f5f5f5;
+  --accent-color: #d5fc7b;
+  --highlight-color: #56f1aa;
+  --yellow: #fff491;
+  --red: #fb4e4e;
+  --green: #56f1aa;
 }
 
-.red__color {
+.red {
   background-color: var(--red);
 }
 
-.yellow__color {
+.yellow {
   background-color: var(--yellow);
 }
 
-.green__color {
+.green {
   background-color: var(--green);
 }
 
-.blue__color {
-  background-color: var(--blue);
+.text__white {
+  color: var(--secondary-color);
 }
 
-.black__color {
-  background-color: var(--black);
+.text__black {
+  color: var(--primary-color);
 }
 
-.orange__color {
-  background-color: var(--orange);
+.background__white {
+  background-color: var(--secondary-color);
 }
 
-.black__text-color {
-  color: var(--black);
-}
-
-.white__text-color {
-  color: var(--white);
+.background__black {
+  background-color: var(--primary-color);
 }
 
 .page {
@@ -51,7 +56,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  color: var(--black);
+  color: var(--primary-color);
   font-family: "Neue Machina Regular", serif;
   background-color: var(--gray);
   max-inline-size: 100vw;
@@ -63,7 +68,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: var(--black);
+  background-color: var(--primary-color);
   inline-size: 100%;
 }
 
@@ -75,7 +80,6 @@
 }
 
 .logo__text {
-  color: var(--white);
   font-family: "Neue Machina Ultrabold", serif;
   font-weight: 800;
   font-size: 40px;
@@ -108,7 +112,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px;
-  background-color: var(--black);
+  background-color: var(--primary-color);
 }
 
 .hero__header-circle {
@@ -124,7 +128,7 @@
   gap: 20px;
   padding: 20px;
   overflow: hidden;
-  background-color: var(--lightgreen-2);
+  background-color: var(--accent-color);
 }
 
 .hero__content-title {
@@ -186,7 +190,7 @@
 .accent {
   font-style: italic;
   font-size: 15px;
-  opacity: .6;
+  opacity: .8;
   font-weight: 200;
 }
 
@@ -196,9 +200,8 @@
   align-items: center;
   gap: 20px;
   padding: 20px;
-  color: var(--white);
   font-size: 40px;
-  background-color: var(--black);
+  background-color: var(--primary-color);
   inline-size: 100%;
 }
 

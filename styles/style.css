@@ -1,25 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-  /* --black: #333333;
-  --white: #ffffff;
-  --gray: #f5f5f5;
-  --lightgreen: #cafe64;
-  --lightgreen-2: #d5fc7b;
-  --yellow: #fff491;
-  --red: #fb4e4e;
-  --green: #56f1aa;
-  --blue: #0a56fd;
-  --orange: #f89439; */
-
   --primary-color: #333333;
   --secondary-color: #ffffff;
-  --tertiary-color: #f5f5f5;
-  --accent-color: #d5fc7b;
-  --highlight-color: #56f1aa;
+  --lightgreen: #d5fc7b;
+  --gray: #f5f5f5;
   --yellow: #fff491;
   --red: #fb4e4e;
   --green: #56f1aa;
+  --darkgreen: #179a82;
+  --blue: #0a56fd;
 }
 
 .red {
@@ -48,6 +38,18 @@
 
 .background__black {
   background-color: var(--primary-color);
+}
+
+.background__green {
+   background-color: var(--darkgreen);
+}
+
+.background__blue {
+   background-color: var(--blue);
+}
+
+.border__black {
+   border: 2px solid var(--primary-color);
 }
 
 .page {
@@ -84,10 +86,6 @@
   font-weight: 800;
   font-size: 40px;
   line-height: 120%;
-}
-
-.logo__image {
-  max-inline-size: 20%;
 }
 
 .main {
@@ -128,7 +126,7 @@
   gap: 20px;
   padding: 20px;
   overflow: hidden;
-  background-color: var(--accent-color);
+  background-color: var(--lightgreen);
 }
 
 .hero__content-title {
@@ -150,8 +148,9 @@
 }
 
 .cat__image {
-  position: relative;
-  top: 25px;
+  border-radius: 10px;
+  /* position: relative;
+  top: 25px; */
   inline-size: 100%;
 }
 
@@ -188,10 +187,8 @@
 }
 
 .accent {
-  font-style: italic;
   font-size: 15px;
-  opacity: .8;
-  font-weight: 200;
+  font-style: italic;
 }
 
 .footer {

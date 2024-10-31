@@ -10,26 +10,21 @@
   --green: #56f1aa;
   --darkgreen: #179a82;
   --blue: #0a56fd;
+  --border-radius: 10px;
 }
 
-.red {
+/* Цвета бэкграунда */
+.background__red {
+
   background-color: var(--red);
 }
 
-.yellow {
+.background__yellow {
   background-color: var(--yellow);
 }
 
-.green {
+.background__green {
   background-color: var(--green);
-}
-
-.text__white {
-  color: var(--secondary-color);
-}
-
-.text__black {
-  color: var(--primary-color);
 }
 
 .background__white {
@@ -40,7 +35,7 @@
   background-color: var(--primary-color);
 }
 
-.background__green {
+.background__darkgreen {
    background-color: var(--darkgreen);
 }
 
@@ -48,10 +43,21 @@
    background-color: var(--blue);
 }
 
-.border__black {
-   border: 2px solid var(--primary-color);
+/* Цвета текста */
+.text__white {
+  color: var(--secondary-color);
 }
 
+.text__black {
+  color: var(--primary-color);
+}
+
+/* Скругление углов */
+.border__radius {
+  border-radius: var(--border-radius);
+}
+
+/* Основной код */
 .page {
   display: flex;
   flex-direction: column;
@@ -101,7 +107,6 @@
 .main__hero {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -143,14 +148,10 @@
 }
 
 .pomkada__image {
-  border-radius: 10px;
   inline-size: 100%;
 }
 
 .cat__image {
-  border-radius: 10px;
-  /* position: relative;
-  top: 25px; */
   inline-size: 100%;
 }
 
@@ -164,7 +165,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-radius: 10px;
   padding: 20px;
 }
 
@@ -175,7 +175,6 @@
 }
 
 .card__image {
-  border-radius: 10px;
   inline-size: 100%;
 }
 
@@ -187,6 +186,7 @@
 }
 
 .accent {
+  opacity: .8;
   font-size: 15px;
   font-style: italic;
 }

@@ -1,29 +1,6 @@
-/* :root {
-  --neue-machina-light-path: url("../fonts/NeueMachina-Light.otf") format("opentype");
-  --neue-machina-regular-path: url("../fonts/NeueMachina-Regular.otf") format("opentype");
-  --neue-machina-ultrabold-path: url("../fonts/NeueMachina-Ultrabold.otf") format("opentype");
-} */
-
-@font-face {
-  font-family: "Neue Machina Light";
-  src: url("../fonts/NeueMachina-Light.otf") format("opentype");
-  /* src: var(--neue-machina-light-path); */
-  font-weight: 300;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neue Machina Regular";
-  src: url("../fonts/NeueMachina-Regular.otf") format("opentype");
-  /* src: var(--neue-machina-regular-path); */
-  font-weight: 400;
-  font-display: swap;
-}
-
 @font-face {
   font-family: "Neue Machina Ultrabold";
-  src: url("../fonts/NeueMachina-Ultrabold.otf") format("opentype");
-  /* src: var(--neue-machina-ultrabold-path); */
+  src: url("../fonts/PPNeueMachina-PlainUltrabold.otf") format("opentype");
   font-weight: 800;
   font-display: swap;
 }

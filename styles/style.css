@@ -15,7 +15,6 @@
 
 /* Цвета бэкграунда */
 .background__red {
-
   background-color: var(--red);
 }
 
@@ -65,7 +64,8 @@
   align-items: center;
   gap: 20px;
   color: var(--primary-color);
-  font-family: "Neue Machina Regular", serif;
+  font-family: "Inter";
+  font-weight: 400;
   background-color: var(--gray);
   max-inline-size: 100vw;
   min-block-size: 100dvh;
@@ -88,10 +88,10 @@
 }
 
 .logo__text {
-  font-family: "Neue Machina Ultrabold", serif;
+  font-family: "Neue Machina Ultrabold";
   font-weight: 800;
   font-size: 40px;
-  line-height: 120%;
+  block-size: 35px;
 }
 
 .main {
@@ -104,7 +104,7 @@
   inline-size: 768px;
 }
 
-.main__hero {
+.hero {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -135,16 +135,19 @@
 }
 
 .hero__content-title {
-  font-family: "Neue Machina Ultrabold", serif;
+  font-family: "Neue Machina Ultrabold";
   font-weight: 800;
   font-size: 40px;
 }
 
 .hero__content-subtitle {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
   font-size: 20px;
   text-wrap: pretty;
+}
+
+.hero__image {
+  position: relative;
+  top: 25px;
 }
 
 .pomkada__image {
@@ -169,7 +172,7 @@
 }
 
 .card__title {
-  font-family: "Neue Machina Ultrabold", serif;
+  font-family: "Neue Machina Ultrabold";
   font-weight: 800;
   font-size: 40px;
 }
@@ -179,8 +182,7 @@
 }
 
 .card__subtitle {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
+
   font-size: 20px;
   text-wrap: pretty;
 }
@@ -211,6 +213,7 @@
 
   .logo__text {
     font-size: 30px;
+    block-size: 28px;
   }
 
   .main {

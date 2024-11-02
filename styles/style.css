@@ -91,7 +91,7 @@
   font-family: "Neue Machina Ultrabold";
   font-weight: 800;
   font-size: 40px;
-  block-size: 35px;
+  line-height: 120%;
 }
 
 .main {
@@ -138,6 +138,7 @@
   font-family: "Neue Machina Ultrabold";
   font-weight: 800;
   font-size: 40px;
+  line-height: 120%;
 }
 
 .hero__content-subtitle {
@@ -175,6 +176,7 @@
   font-family: "Neue Machina Ultrabold";
   font-weight: 800;
   font-size: 40px;
+  line-height: 120%;
 }
 
 .card__image {
@@ -182,7 +184,6 @@
 }
 
 .card__subtitle {
-
   font-size: 20px;
   text-wrap: pretty;
 }
@@ -202,6 +203,9 @@
   font-size: 40px;
   background-color: var(--primary-color);
   inline-size: 100%;
+  font-family: "Neue Machina Regular";
+
+  font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
@@ -213,7 +217,6 @@
 
   .logo__text {
     font-size: 30px;
-    block-size: 28px;
   }
 
   .main {

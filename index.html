@@ -9,13 +9,16 @@
   <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body class="page">
+
   <header class="header">
     <div class="logo">
       <img class="logo__image" src="./images/logo.svg">
       <a class="logo__text text__white">Помкада</a>
     </div>
   </header>
+
   <main class="main">
+    <!-- Вводная карточка с описанием помкады -->
     <div class="hero border__radius">
       <div class="hero__header">
         <div class="hero__header-circle background__red"></div>
@@ -23,14 +26,25 @@
         <div class="hero__header-circle background__green"></div>
       </div>
       <div class="hero__content">
-        <!-- Подстановка из JSON файла -->
-        <h2 class="hero__content-title"></h2>
-        <!-- Подстановка из JSON файла -->
-        <p class="hero__content-subtitle"></p>
-        <img class="hero__image" src="./images/cat.svg">
+        <h2 class="hero__content-title">Что же такое помкада?</h2>
+        <p class="hero__content-subtitle">
+          Помкада — это уникальный экзотический фрукт,
+          который произрастает на деревьях в далёких тропических лесах.
+          Этот фрукт имеет необычную форму и яркую окраску,
+          что делает его настоящим украшением природы.
+        </p>
+        <p class="hero__content-subtitle">
+          Помкада богата витаминами A, C, E, а также калием, магнием и железом.
+          Эти элементы способствуют укреплению иммунной системы,
+          улучшению работы сердечно-сосудистой системы и поддержанию здорового обмена веществ.
+          Антиоксиданты, содержащиеся во фрукте,
+          помогают организму бороться со свободными радикалами и предотвращают преждевременное старение.
+        </p>
       </div>
     </div>
-    <div class="main__content">
+
+    <!-- Начало контента с другими карточками -->
+    <div class="content">
       <div class="content__card background__black text__white border__radius">
         <h2 class="card__title">
           Как она выглядит?
@@ -59,63 +73,14 @@
           Она отлично сочетается с другими фруктами, орехами и специями.
         </span>
       </div>
-      <div class="content__card background__black text__white border__radius">
-        <h2 class="card__title">Матильда Штрихкодовна</h2>
-        <div class="card__image-container">
-          <img class="card__image border__radius" src="./images/ambassador.jpg">
-          <span class="card__subtitle accent">
-            Амбассадор бренда "Помкада".
-          </span>
-        </div>
-        <span class="card__subtitle">
-          Матильда Штрихкодовна — это амбассадор бренда “Помкада”,
-          олицетворяющая собой уникальность и экзотику этого удивительного фрукта.
-          Её имя и фамилия отражают её связь с миром высоких технологий и инноваций,
-          что делает её идеальным представителем для бренда, стремящегося к новым вершинам.
-        </span>
-        <span class="card__subtitle">
-          Матильда обладает яркой и запоминающейся внешностью,
-          которая привлекает внимание своей необычностью.
-          Её стиль сочетает в себе элегантность и смелость,
-          что отражает дух бренда “Помкада”.
-          Она всегда готова поделиться своими знаниями и любовью к этому фрукту,
-          вдохновляя людей на новые открытия и приключения.
-        </span>
-        <span class="card__subtitle">
-          Матильда Штрихкодовна — это не просто амбассадор,
-          она — символ уникальности и экзотики,
-          который вдохновляет каждого на поиск своего собственного “Помкада” в жизни.
-        </span>
-      </div>
-    <div class="main__content">
-      <div class="content__card background__black text__white border__radius" id="card">
-        <h2 class="card__title">Коты очень любят Помкаду!</h2>
-        <span class="card__subtitle">
-          Коты обожают помкаду! Этот уникальный экзотический фрукт,
-          произрастающий в далёких тропических лесах,
-          привлекает их своим ярким цветом и необычным ароматом.
-        </span>
-        <img class="cat__image border__radius" src="./images/cat_2.jfif">
-        <span class="card__subtitle">
-          Когда помкада появляется в доме,
-          где живут коты, начинается настоящее веселье.
-          Животные сразу же замечают новый предмет и начинают исследовать его.
-          Они обнюхивают фрукт, трогают его лапами и даже пытаются укусить.
-        </span>
-        <img class="cat__image border__radius" src="./images/cat_3.jfif">
-        <span class="card__subtitle">
-          Но самое интересное начинается, когда коты понимают, что помкада съедобна.
-          Они начинают есть фрукт, наслаждаясь его сладким вкусом и нежной текстурой.
-          Коты могут съесть помкаду целиком, оставив только кожуру,
-          или же разделить её на части, играя с ней, как с игрушкой.
-        </span>
-      </div>
+
+
     </div>
   </main>
   <footer class="footer">
     <span class="footer__text text__white">© «Помкада»</span>
     <span class="footer__text text__white">2024</span>
   </footer>
-  <script src="./scripts/main.js"></script>
+  <!-- <script src="./scripts/main.js"></script> -->
 </body>
 </html>

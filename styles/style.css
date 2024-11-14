@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+:root {
+  --primary-color: #333333;
+  --secondary-color: #ffffff;
+  --lightgreen: #d5fc7b;
+  --gray: #f5f5f5;
+  --yellow: #fff491;
+  --red: #fb4e4e;
+  --green: #56f1aa;
+  --darkgreen: #179a82;
+  --blue: #0a56fd;
+  --border-radius: 10px;
+}
+
+/* Цвета бэкграунда */
+.background__red {
+  background-color: var(--red);
+}
+
+.background__yellow {
+  background-color: var(--yellow);
+}
+
+.background__green {
+  background-color: var(--green);
+}
+
+.background__white {
+  background-color: var(--secondary-color);
+}
+
+.background__black {
+  background-color: var(--primary-color);
+}
+
+.background__darkgreen {
+   background-color: var(--darkgreen);
+}
+
+.background__blue {
+   background-color: var(--blue);
+}
+
+/* Цвета текста */
+.text__white {
+  color: var(--secondary-color);
+}
+
+.text__black {
+  color: var(--primary-color);
+}
+
+/* Скругление углов */
+.border__radius {
+  border-radius: var(--border-radius);
+}
+
+/* Основной код */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: var(--primary-color);
+  font-family: "Inter";
+  font-weight: 400;
+  background-color: var(--gray);
+  max-inline-size: 100vw;
+  min-block-size: 100dvh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  inline-size: 100%;
+}
+
+.logo {
+  display: flex;
+  gap: 20px;
+  user-select: none;
+}
+
+.logo__text {
+  color: var(--secondary-color);
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  inline-size: 768px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.intro__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--primary-color);
+}
+
+.intro__header-circle {
+  border-radius: 100%;
+  inline-size: 15px;
+  block-size: 15px;
+}
+
+.intro__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+  background-color: var(--lightgreen);
+  background-image: url(../images/intro_background.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.intro__content-title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 120%;
+}
+
+.intro__content-subtitle {
+  font-size: 20px;
+  text-wrap: pretty;
+}
+
+.intro__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  /* background-image: url(../images/first_card_bg.svg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.card__title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 120%;
+}
+
+.card__image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pomkada__image {
+  inline-size: 100%;
+}
+
+.card__subtitle {
+  font-size: 20px;
+  text-wrap: pretty;
+}
+
+.accent {
+  opacity: .8;
+  font-size: 15px;
+  font-style: italic;
+}
+
+.content__list {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  background-color: var(--primary-color);
+  inline-size: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .main {
+    padding-inline: 20px;
+    inline-size: 100%;
+  }
+
+  .intro__content {
+    inline-size: 100%;
+  }
+
+  .intro__content-title {
+    font-size: 20px;
+  }
+
+  .intro__content-subtitle {
+    font-size: 15px;
+  }
+
+  .content__card {
+    inline-size: 100%;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card__subtitle {
+    font-size: 15px;
+  }
+
+  .accent {
+    font-size: 12px;
+  }
+
+  .content__list {
+    font-size: 15px;
+  }
+
+  .footer {
+    font-size: 20px;
+  }
+}

@@ -68,8 +68,13 @@
   font-family: "Inter";
   font-weight: 400;
   background-color: var(--gray);
+  background-image: url(../images/page_background.png);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: auto;
   max-inline-size: 100vw;
   min-block-size: 100dvh;
+
 }
 
 .header {
@@ -131,10 +136,6 @@
   padding: 20px;
   overflow: hidden;
   background-color: var(--lightgreen);
-  background-image: url(../images/intro_background.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .intro__content-title {
@@ -151,9 +152,9 @@
 
 .intro__image {
   position: relative;
-  width: 100%;
-  height: 100%;
+  top: 30px;
 }
+
 
 .content {
   display: flex;
@@ -183,21 +184,22 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  inline-size: 100%;
 }
 
-.pomkada__image {
+.card__image {
   inline-size: 100%;
+}
+
+.card__image-subtitle {
+  opacity: .8;
+  font-size: 15px;
+  font-style: italic;
 }
 
 .card__subtitle {
   font-size: 20px;
   text-wrap: pretty;
-}
-
-.accent {
-  opacity: .8;
-  font-size: 15px;
-  font-style: italic;
 }
 
 .content__list {
@@ -219,6 +221,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .page {
+    background-size: auto
+  }
   .header {
     justify-content: center;
     align-items: center;

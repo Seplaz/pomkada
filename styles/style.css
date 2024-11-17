@@ -112,6 +112,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  inline-size: 100%;
 }
 
 .intro__header {
@@ -145,6 +146,19 @@
   line-height: 120%;
 }
 
+.intro__content-button {
+  border: 2px solid var(--primary-color);
+  padding: 20px;
+  font-size: 20px;
+  inline-size: 30%;
+  align-self: center;
+}
+
+.intro__content-button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
 .intro__content-subtitle {
   font-size: 20px;
   text-wrap: pretty;
@@ -152,9 +166,9 @@
 
 .intro__image {
   position: relative;
-  top: 30px;
+  /* top: 30px; */
+  inline-size: 100%;
 }
-
 
 .content {
   display: flex;
@@ -222,7 +236,7 @@
 
 @media screen and (max-width: 768px) {
   .page {
-    background-size: auto
+    background-size: auto;
   }
   .header {
     justify-content: center;
@@ -242,6 +256,12 @@
   .intro__content-title {
     font-size: 20px;
   }
+  .intro__content-button {
+    border: none;
+    padding: 20px;
+    font-size: 15px;
+    inline-size: 80%;
+  }
 
   .intro__content-subtitle {
     font-size: 15px;
@@ -259,7 +279,7 @@
     font-size: 15px;
   }
 
-  .accent {
+  .card__image-subtitle {
     font-size: 12px;
   }
 

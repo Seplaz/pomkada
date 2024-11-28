@@ -147,16 +147,16 @@
 }
 
 .intro__content-button {
+  align-self: center;
   border: 2px solid var(--primary-color);
   padding: 20px;
   font-size: 20px;
   inline-size: 30%;
-  align-self: center;
 }
 
 .intro__content-button:hover {
-  background-color: transparent;
   color: var(--primary-color);
+  background-color: transparent;
 }
 
 .intro__content-subtitle {
@@ -181,6 +181,7 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -195,8 +196,7 @@
 
 .card__image-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   inline-size: 100%;
 }
 
@@ -204,9 +204,15 @@
   inline-size: 100%;
 }
 
+.card__image-chervyak {
+  inline-size: 65%;
+}
+
 .card__image-babochka {
-  inline-size: 40%;
-  align-self: flex-end;
+  position: relative;
+  top: -120px;
+  left: 70px;
+  inline-size: 30%;
 }
 
 .card__image-subtitle {
@@ -277,6 +283,12 @@
 
   .card__title {
     font-size: 20px;
+  }
+
+  .card__image-babochka {
+    position: relative;
+    top: -70px;
+    left: 35px;
   }
 
   .card__subtitle {

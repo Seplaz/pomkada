@@ -148,14 +148,13 @@
 .intro__content-button {
   align-self: center;
   border: 2px solid var(--primary-color);
-  padding: 20px;
+  padding: 10px 30px;
   font-size: 20px;
-  inline-size: 30%;
+  /* inline-size: 30%; */
 }
 
 .intro__content-button:hover {
-  color: var(--primary-color);
-  background-color: transparent;
+  color: var(--green);
 }
 
 .intro__content-subtitle {
@@ -260,10 +259,7 @@
   }
 
   .intro__content-button {
-    border: none;
-    padding: 20px;
     font-size: 15px;
-    inline-size: 80%;
   }
 
   .intro__content-subtitle {

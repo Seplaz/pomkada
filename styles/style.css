@@ -181,7 +181,6 @@
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  /* background-image: url(../images/first_card_bg.svg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -196,13 +195,18 @@
 
 .card__image-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: space-between;
   inline-size: 100%;
 }
 
 .card__image {
   inline-size: 100%;
+}
+
+.card__image-babochka {
+  inline-size: 40%;
+  align-self: flex-end;
 }
 
 .card__image-subtitle {

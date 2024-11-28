@@ -71,7 +71,6 @@
   background-image: url(../images/page_background.png);
   background-repeat: repeat-y;
   background-position: center;
-  background-size: auto;
   max-inline-size: 100vw;
   min-block-size: 100dvh;
 
@@ -204,17 +203,6 @@
   inline-size: 100%;
 }
 
-.card__image-chervyak {
-  inline-size: 65%;
-}
-
-.card__image-babochka {
-  position: relative;
-  top: -120px;
-  left: 70px;
-  inline-size: 30%;
-}
-
 .card__image-subtitle {
   opacity: .8;
   font-size: 15px;
@@ -224,6 +212,10 @@
 .card__subtitle {
   font-size: 20px;
   text-wrap: pretty;
+}
+
+.heart {
+  color: var(--red);
 }
 
 .content__list {
@@ -246,7 +238,7 @@
 
 @media screen and (max-width: 768px) {
   .page {
-    background-size: auto;
+    background-size: contain;
   }
   .header {
     justify-content: center;
@@ -266,6 +258,7 @@
   .intro__content-title {
     font-size: 20px;
   }
+
   .intro__content-button {
     border: none;
     padding: 20px;
@@ -283,12 +276,6 @@
 
   .card__title {
     font-size: 20px;
-  }
-
-  .card__image-babochka {
-    position: relative;
-    top: -70px;
-    left: 35px;
   }
 
   .card__subtitle {

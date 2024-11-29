@@ -194,16 +194,23 @@
 
 .card__image-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 10px;
   inline-size: 100%;
 }
 
 .card__image {
+  user-select: none;
   inline-size: 100%;
 }
 
+.pomkada {
+  cursor: pointer;
+}
+
 .card__image-subtitle {
-  opacity: .8;
+  opacity: .6;
   font-size: 15px;
   font-style: italic;
 }
@@ -215,11 +222,6 @@
 
 .heart {
   color: var(--red);
-}
-
-.content__list {
-  font-size: 20px;
-  font-style: italic;
 }
 
 .footer {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Помкада</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+  </head>
+  <body class="page">
+    <div class="particles"></div>
+    <header class="header">
+      <a class="logo">
+        <img src="./svg/logo.svg" alt="Логотип" />
+      </a>
+    </header>
+    <main class="main">
+
+      <div class="intro">
+        <h1 class="intro__title">
+          Нажми 
+          <span class="accent__text">на кнопку —</span> 
+          получишь 
+          <span class="accent__text">результат.</span>
+        </h1>
+        <p class="intro__text">
+          Сервис автоматического подбора фильмов на вечер.
+        </p>
+      </div>
+
+      <div class="buttons">
+        <button id="movieButton" class="button" type="button">
+          <span class="button__title">Выбрать случайный фильм</span>
+          <img class="button__icon" src="./svg/arrow.svg" alt="Стрелка" aria-hidden="true"/>
+        </button>
+      </div>
+      <div class="card">
+      </div>
+    </main>
+    <script src="./scripts/particles.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

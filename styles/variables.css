@@ -1,0 +1,11 @@
+/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --color-background: #0A0A0A;
+  --color-button-background: #262626;
+  --color-card-background: #171717;
+  --color-border: #1F2228;
+  --color-text-secondary: #7D8187;
+  --color-text-primary: #FFFFFF;
+  --color-red: #8C2F39;
+  --color-green: #22C55E;
+}

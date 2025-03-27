@@ -1,3 +1,14 @@
+:root {
+  --color-background: #0A0A0A;
+  --color-button-background: #262626;
+  --color-card-background: #171717;
+  --color-border: #1F2228;
+  --color-text-secondary: #7D8187;
+  --color-text-primary: #FFFFFF;
+  --color-red: #8C2F39;
+  --color-green: #22C55E;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -10,15 +21,19 @@
   background-image: url(../svg/page-background.svg);
   background-repeat: no-repeat;
   background-position: top center;
+  font-optical-sizing: auto;
   max-inline-size: 1024px;
   min-block-size: 100svb;
+}
+
+.header {
+  block-size: 40px;
 }
 
 .logo {
   position: relative;
   z-index: 1;
-  user-select: none;
-} 
+}
 
 .main {
   display: flex;
@@ -169,7 +184,7 @@
   width: 2px;
   height: 2px;
   border-radius: 50%;
-  opacity: 0.5;
+  opacity: 0.8;
   background-color: var(--color-red);
   pointer-events: none;
 }

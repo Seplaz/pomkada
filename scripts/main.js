@@ -1,5 +1,7 @@
 let horrorMovies = [];
 let shownMovies = new Set();
+let predictions = [];
+let shownPredictions = new Set();
 
 async function loadMovies() {
   try {
@@ -16,6 +18,21 @@ async function loadMovies() {
   }
 }
 
+async function loadPredictions() {
+  try {
+    const response = await fetch('./data/predictions.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    predictions = data.predictions;
+    return true;
+  } catch (error) {
+    console.error('Ошибка при загрузке предсказаний:', error);
+    return false;
+  }
+}
+
 function getRandomMovie() {
   if (!horrorMovies || horrorMovies.length === 0) {
     console.error('Список фильмов пуст');
@@ -27,24 +44,48 @@ function getRandomMovie() {
   }
 
   const availableMovies = horrorMovies.filter(movie => !shownMovies.has(movie.name));
-  
+
   if (availableMovies.length === 0) {
     return null;
   }
 
   const randomIndex = Math.floor(Math.random() * availableMovies.length);
   const selectedMovie = availableMovies[randomIndex];
-  
+
   shownMovies.add(selectedMovie.name);
-  
+
   return selectedMovie;
+}
+
+function getRandomPrediction() {
+  if (!predictions || predictions.length === 0) {
+    console.error('Список предсказаний пуст');
+    return null;
+  }
+
+  if (shownPredictions.size >= predictions.length) {
+    shownPredictions.clear();
+  }
+
+  const availablePredictions = predictions.filter(prediction => !shownPredictions.has(prediction.title));
+
+  if (availablePredictions.length === 0) {
+    return null;
+  }
+
+  const randomIndex = Math.floor(Math.random() * availablePredictions.length);
+  const selectedPrediction = availablePredictions[randomIndex];
+
+  shownPredictions.add(selectedPrediction.title);
+
+  return selectedPrediction;
 }
 
 async function searchMovieOnKinopoisk(movieName, movieYear) {
   try {
     const searchQuery = encodeURIComponent(`${movieName} ${movieYear}`);
     const searchUrl = `https://www.kinopoisk.ru/index.php?kp_query=${searchQuery}`;
-    
+
     window.open(searchUrl, '_blank');
   } catch (error) {
     console.error('Ошибка при поиске фильма:', error);
@@ -56,12 +97,12 @@ function updateCard(movie) {
     console.error('Фильм не выбран');
     return;
   }
-  
+
   const card = document.querySelector('.card');
-  
+
   const clone = card.cloneNode(true);
   card.parentNode.replaceChild(clone, card);
-  
+
   clone.innerHTML = `
     <div class="card__content">
       <div class="card__info">
@@ -80,7 +121,7 @@ function updateCard(movie) {
 
 
   clone.classList.add('active');
-  
+
   clone.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
   clone.addEventListener('click', () => {
@@ -88,22 +129,60 @@ function updateCard(movie) {
   });
 }
 
+function updateCardWithPrediction(prediction) {
+  if (!prediction) {
+    console.error('Предсказание не выбрано');
+    return;
+  }
+
+  const card = document.querySelector('.card');
+
+  const clone = card.cloneNode(true);
+  card.parentNode.replaceChild(clone, card);
+
+  clone.innerHTML = `
+    <div class="card__content">
+      <div class="card__info">
+        <h2 class="card__title">${prediction.title}</h2>
+        <p class="card__text">${prediction.description}</p>
+      </div>
+    </div>
+  `;
+
+  clone.classList.add('active');
+
+  clone.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const movieButton = document.getElementById('movieButton');
-  
-  if (!movieButton) {
-    console.error('Кнопка не найдена');
+  const predictionButton = document.getElementById('predictionButton');
+
+  if (!movieButton || !predictionButton) {
+    console.error('Кнопки не найдены');
     return;
   }
 
   const moviesLoaded = await loadMovies();
+  const predictionsLoaded = await loadPredictions();
+
   if (!moviesLoaded) {
     console.error('Не удалось загрузить фильмы');
+    return;
+  }
+
+  if (!predictionsLoaded) {
+    console.error('Не удалось загрузить предсказания');
     return;
   }
 
   movieButton.addEventListener('click', () => {
     const randomMovie = getRandomMovie();
     updateCard(randomMovie);
+  });
+
+  predictionButton.addEventListener('click', () => {
+    const randomPrediction = getRandomPrediction();
+    updateCardWithPrediction(randomPrediction);
   });
 });

@@ -1,0 +1,214 @@
+:root {
+  --color-background: #0A0A0A;
+  --color-button-background: #262626;
+  --color-card-background: #171717;
+  --color-border: #1F2228;
+  --color-text-secondary: #7D8187;
+  --color-text-primary: #FFFFFF;
+  --color-red: #8C2F39;
+  --color-green: #22C55E;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin: 0 auto;
+  padding: 24px;
+  color: var(--color-text-primary);
+  font-family: "Geist", sans-serif;
+  background-color: var(--color-background);
+  background-image: url(../svg/page-background.svg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  font-optical-sizing: auto;
+  max-inline-size: 1024px;
+  min-block-size: 100svb;
+}
+
+.header {
+  block-size: 40px;
+}
+
+.logo {
+  position: relative;
+  z-index: 1;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-inline: 1px solid var(--color-text-secondary);
+  padding: 24px;
+
+}
+
+.intro__title {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 48px;
+  user-select: none;
+}
+
+.accent__text {
+  color: var(--color-red);
+}
+
+.intro__text {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Ввод фильма */
+.input {
+  display: flex;
+  gap: 24px;
+  background-color: transparent;
+}
+
+.input__text {
+  inline-size: 100%;
+  padding: 24px;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  z-index: 1;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input__text::placeholder {
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input__text:focus {
+  outline: none;
+  border-color: var(--color-text-secondary);
+}
+
+/* Контейнер с кнопками и сами кнопки */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  inline-size: 100%;
+}
+
+.button {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  border-inline: 1px solid var(--color-text-secondary);
+  border-block: 1px solid transparent;
+  padding: 24px;
+  background-color: transparent;
+  transition: border-block 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  min-inline-size: 272px;
+}
+
+.button:hover {
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 16px;
+  background-color: var(--color-button-background);
+  transition: border-block 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+}
+
+.button__title {
+  color: var(--color-text-primary);
+  font-weight: 400;
+  font-size: 16px;
+  user-select: none;
+}
+
+.button__icon {
+  inline-size: 20px;
+  block-size: 20px;
+}
+
+/* Карточка */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  background-color: var(--color-card-background);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 0 12px 0 var(--color-text-secondary);
+}
+
+.card.active {
+  display: flex;
+}
+
+.card__title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.card__text {
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+/* Эффекты фона страницы */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0.8;
+  background-color: var(--color-red);
+  pointer-events: none;
+}
+
+@media (max-width: 425px) {
+  .input {
+    flex-wrap: wrap;
+  }
+}

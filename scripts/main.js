@@ -11,6 +11,11 @@ const randomButton = buttonTemplate.querySelector('.button').cloneNode(true);
 randomButton.querySelector('.button__title').textContent = 'Выбрать случайный фильм';
 buttonsContainer.append(randomButton);
 
+// Кнопка добавить фильм
+const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
+addButton.querySelector('.button__title').textContent = 'Добавить фильм';
+buttonsContainer.append(addButton);
+
 // Создание карточки с фильмом
 const createCard = (image, name, year, rating, description) => {
   const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
@@ -19,6 +24,7 @@ const createCard = (image, name, year, rating, description) => {
   cardElement.querySelector('.year').textContent = year;
   cardElement.querySelector('.rating').textContent = rating;
   cardElement.querySelector('.description').textContent = description;
+
   return cardElement;
 }
 
@@ -26,3 +32,6 @@ const createCard = (image, name, year, rating, description) => {
 movies.forEach((item) => {
   cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
 })
+
+//Обработчик нажатия на карточку
+// const searchUrl = `https://www.kinopoisk.ru/index.php?kp_query=${searchQuery}`;

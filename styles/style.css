@@ -6,7 +6,7 @@
     --color-text-light: #F8F4F0;
     --color-text-dark: #2C3E50;
   
-    --color-accent-red: #C0392B;
+    --color-accent-red: #8C2F39;
     --color-accent-yellow: #F1C40F;
     --color-accent-orange: #E67E22;
     --color-accent-blue: #3498DB;
@@ -94,18 +94,21 @@
   color: var(--color-text-primary);
   font-weight: 400;
   font-size: 16px;
-  background-color: var(--color-background);
+  background-color: var(--color-bg-dark);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
   inline-size: 100%;
 }
 
 .input__text::placeholder {
-  color: var(--color-text-secondary);
+  opacity: 0.6;
+  color: var(--color-text-light);
   font-weight: 400;
   font-size: 16px;
 }
 
 .input__text:focus {
-  border-color: var(--color-border);
+  border-color: var(--color-accent-red);
+  box-shadow: 0 0 12px 0 var(--color-accent-red);
   outline: none;
 }
 
@@ -120,7 +123,6 @@
 }
 
 .button {
-  position: relative;
   display: flex;
   flex: 1;
   justify-content: space-between;
@@ -128,16 +130,18 @@
   gap: 12px;
   border: none;
   border-inline: 1px solid var(--color-border);
+  border-block: 1px solid transparent;
   padding: 24px;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease, border-radius 0.3s ease;
   cursor: pointer;
   min-inline-size: 272px;
 }
 
 .button:hover {
+  border-radius: 16px;
+  border-block: 1px solid var(--color-border);
   background-color: var(--color-border);
-  transition: background-color 0.3s ease;
 }
 
 .button__title {
@@ -163,18 +167,19 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  inline-size: 100%;
   gap: 8px;
   border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 24px;
   background-color: var(--color-bg-dark);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   user-select: none;
+  inline-size: 100%;
 }
 
 .card:hover {
+  border-color: var(--color-accent-red);
   box-shadow: 0 0 12px 0 var(--color-accent-red);
 }
 
@@ -195,10 +200,10 @@
 }
 
 .card__text {
+  opacity: 0.6;
   color: var(--color-text-light);
   font-weight: 400;
   font-size: 16px;
-  opacity: 0.6;
 }
 
 /* Эффекты фона страницы */

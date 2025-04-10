@@ -11,6 +11,23 @@ const randomButton = buttonTemplate.querySelector('.button').cloneNode(true);
 randomButton.querySelector('.button__title').textContent = 'Выбрать случайный фильм';
 buttonsContainer.append(randomButton);
 
+randomButton.addEventListener('click', () => {
+  if (cardsContainer.firstChild) {
+    cardsContainer.firstChild.remove();
+  }
+
+  const randomIndex = Math.floor(Math.random() * movies.length);
+  const randomMovie = movies[randomIndex];
+  
+  cardsContainer.append(createCard(
+    randomMovie.image,
+    randomMovie.name,
+    randomMovie.year,
+    randomMovie.rating,
+    randomMovie.description
+  ));
+})
+
 // Кнопка добавить фильм
 const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
 addButton.querySelector('.button__title').textContent = 'Добавить фильм';
@@ -25,13 +42,14 @@ const createCard = (image, name, year, rating, description) => {
   cardElement.querySelector('.rating').textContent = rating;
   cardElement.querySelector('.description').textContent = description;
 
+  cardElement.addEventListener('click', () => {
+    const movieName = encodeURIComponent(name);
+    window.open(`https://www.kinopoisk.ru/index.php?kp_query=${movieName}`, '_blank');
+  })
   return cardElement;
 }
 
 // Вызов всех карточек из movies.js
-movies.forEach((item) => {
-  cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
-})
-
-//Обработчик нажатия на карточку
-// const searchUrl = `https://www.kinopoisk.ru/index.php?kp_query=${searchQuery}`;
+// movies.forEach((item) => {
+//   cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
+// })

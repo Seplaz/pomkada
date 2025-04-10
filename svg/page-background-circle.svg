@@ -2,8 +2,8 @@
 <circle cx="720" cy="-302" r="720" fill="url(#paint0_radial_207_5)"/>
 <defs>
 <radialGradient id="paint0_radial_207_5" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(720 -302) rotate(90) scale(720)">
-<stop stop-color="#8C2F39" stop-opacity="0.5"/>
-<stop offset="1" stop-color="#0A0A0A"/>
+<stop stop-color="#C0392B" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#1A1A1A"/>
 </radialGradient>
 </defs>
 </svg>

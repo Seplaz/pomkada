@@ -1,12 +1,19 @@
 :root {
-  --color-background: #0A0A0A;
-  --color-button-background: #262626;
-  --color-card-background: #171717;
-  --color-border: #1F2228;
-  --color-text-secondary: #7D8187;
-  --color-text-primary: #FFFFFF;
-  --color-red: #8C2F39;
-  --color-green: #22C55E;
+    /* Основные цвета */
+    --color-bg-dark: #1A1A1A;
+    --color-bg-light: #FAFAFA;
+  
+    --color-text-light: #F8F4F0;
+    --color-text-dark: #2C3E50;
+  
+    --color-accent-red: #C0392B;
+    --color-accent-yellow: #F1C40F;
+    --color-accent-orange: #E67E22;
+    --color-accent-blue: #3498DB;
+  
+    /* Дополнительно */
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-shadow: rgba(0, 0, 0, 0.2);
 }
 
 .page {
@@ -15,10 +22,10 @@
   gap: 48px;
   margin: 0 auto;
   padding: 24px;
-  color: var(--color-text-primary);
+  color: var(--color-text-light);
   font-family: "Geist", sans-serif;
-  background-color: var(--color-background);
-  background-image: url(../svg/page-background.svg);
+  background-color: var(--color-bg-dark);
+  background-image: url(../svg/page-background-circle.svg);
   background-repeat: no-repeat;
   background-position: top center;
   font-optical-sizing: auto;
@@ -46,7 +53,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  border-inline: 1px solid var(--color-text-secondary);
+  border-inline: 1px solid var(--color-border);
   padding: 24px;
 
 }
@@ -61,7 +68,7 @@
 }
 
 .accent__text {
-  color: var(--color-red);
+  color: var(--color-accent-red);
 }
 
 .intro__text {
@@ -81,60 +88,56 @@
 }
 
 .input__text {
-  inline-size: 100%;
-  padding: 24px;
-  background-color: var(--color-background);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-  border-radius: 16px;
   z-index: 1;
-  font-size: 16px;
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  color: var(--color-text-primary);
   font-weight: 400;
+  font-size: 16px;
+  background-color: var(--color-background);
+  inline-size: 100%;
 }
 
 .input__text::placeholder {
   color: var(--color-text-secondary);
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
 }
 
 .input__text:focus {
+  border-color: var(--color-border);
   outline: none;
-  border-color: var(--color-text-secondary);
 }
 
 /* Контейнер с кнопками и сами кнопки */
 .buttons {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 24px;
   inline-size: 100%;
 }
 
 .button {
-  flex: 1;
   position: relative;
   display: flex;
+  flex: 1;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
   border: none;
-  border-inline: 1px solid var(--color-text-secondary);
-  border-block: 1px solid transparent;
+  border-inline: 1px solid var(--color-border);
   padding: 24px;
   background-color: transparent;
-  transition: border-block 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   cursor: pointer;
   min-inline-size: 272px;
 }
 
 .button:hover {
-  border: 1px solid var(--color-text-secondary);
-  border-radius: 16px;
-  background-color: var(--color-button-background);
-  transition: border-block 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+  background-color: var(--color-border);
+  transition: background-color 0.3s ease;
 }
 
 .button__title {
@@ -149,41 +152,53 @@
   block-size: 20px;
 }
 
-/* Карточка */
+/* Карточки */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
+  inline-size: 100%;
   gap: 8px;
   border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 24px;
-  background-color: var(--color-card-background);
+  background-color: var(--color-bg-dark);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   user-select: none;
-  inline-size: 100%;
-  block-size: 100%;
 }
 
 .card:hover {
-  box-shadow: 0 0 12px 0 var(--color-text-secondary);
+  box-shadow: 0 0 12px 0 var(--color-accent-red);
 }
 
-.card.active {
+/* .card.active {
   display: flex;
+} */
+
+.card__image {
+  border-radius: 8px;
+  inline-size: 136px;
+  block-size: 204px;
 }
 
 .card__title {
-  color: var(--color-text-primary);
+  color: var(--color-text-light);
   font-weight: 700;
   font-size: 20px;
 }
 
 .card__text {
-  color: var(--color-text-secondary);
+  color: var(--color-text-light);
   font-weight: 400;
   font-size: 16px;
+  opacity: 0.6;
 }
 
 /* Эффекты фона страницы */
@@ -203,7 +218,7 @@
   height: 2px;
   border-radius: 50%;
   opacity: 0.8;
-  background-color: var(--color-red);
+  background-color: var(--color-accent-red);
   pointer-events: none;
 }
 

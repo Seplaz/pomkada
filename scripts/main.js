@@ -38,8 +38,8 @@ const createCard = (image, name, year, rating, description) => {
   const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
   cardElement.querySelector('.card__image').src = image;
   cardElement.querySelector('.card__title').textContent = name;
-  cardElement.querySelector('.year').textContent = year;
-  cardElement.querySelector('.rating').textContent = rating;
+  cardElement.querySelector('.year').textContent = `Год: ${year}`;
+  cardElement.querySelector('.rating').textContent = `Рейтинг: ${rating}`;
   cardElement.querySelector('.description').textContent = description;
 
   cardElement.addEventListener('click', () => {

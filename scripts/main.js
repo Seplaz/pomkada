@@ -56,6 +56,6 @@ const createCard = (image, name, year, rating, description) => {
 }
 
 // Вызов всех карточек из movies.js
-movies.forEach((item) => {
-  cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
-})
+// movies.forEach((item) => {
+//   cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
+// })

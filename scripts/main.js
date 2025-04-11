@@ -26,6 +26,11 @@ randomButton.addEventListener('click', () => {
     randomMovie.rating,
     randomMovie.description
   ));
+  
+  cardsContainer.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 })
 
 // Кнопка добавить фильм

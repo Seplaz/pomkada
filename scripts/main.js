@@ -42,6 +42,7 @@ buttonsContainer.append(addButton);
 const createCard = (image, name, year, rating, description) => {
   const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
   cardElement.querySelector('.card__image').src = image;
+  cardElement.querySelector('.card__image').alt = `Постер к фильму ${name}`;
   cardElement.querySelector('.card__title').textContent = name;
   cardElement.querySelector('.year').textContent = `Год: ${year}`;
   cardElement.querySelector('.rating').textContent = `Рейтинг: ${rating}`;
@@ -55,6 +56,6 @@ const createCard = (image, name, year, rating, description) => {
 }
 
 // Вызов всех карточек из movies.js
-// movies.forEach((item) => {
-//   cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
-// })
+movies.forEach((item) => {
+  cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
+})

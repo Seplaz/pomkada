@@ -16,6 +16,10 @@
     --color-shadow: rgba(0, 0, 0, 0.2);
 }
 
+html {
+  scroll-padding-block-start: 24px;
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -185,8 +189,8 @@
 .card__description {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   justify-content: space-between;
+  gap: 8px;
 }
 
 .card__image {

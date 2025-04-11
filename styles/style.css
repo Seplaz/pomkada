@@ -14,6 +14,8 @@
     /* Дополнительно */
     --color-border: rgba(255, 255, 255, 0.1);
     --color-shadow: rgba(0, 0, 0, 0.2);
+
+    --transition-default: 0.3s ease;
 }
 
 html {
@@ -99,7 +101,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   background-color: var(--color-bg-dark);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: box-shadow var(--transition-default), border-color var(--transition-default);
   inline-size: 100%;
 }
 
@@ -137,7 +139,7 @@ html {
   border-block: 1px solid transparent;
   padding: 24px;
   background-color: transparent;
-  transition: background-color 0.3s ease, border 0.3s ease, border-radius 0.3s ease;
+  transition: background-color var(--transition-default), border var(--transition-default), border-radius var(--transition-default), scale var(--transition-default);
   cursor: pointer;
   min-inline-size: 272px;
 }
@@ -146,6 +148,10 @@ html {
   border-radius: 16px;
   border-block: 1px solid var(--color-border);
   background-color: var(--color-border);
+}
+
+.button:active {
+  scale: 0.95;
 }
 
 .button__title {
@@ -175,7 +181,7 @@ html {
   border-radius: 16px;
   padding: 24px;
   background-color: var(--color-bg-dark);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: box-shadow var(--transition-default), border-color var(--transition-default), scale var(--transition-default);
   cursor: pointer;
   user-select: none;
   inline-size: 100%;
@@ -184,6 +190,10 @@ html {
 .card:hover {
   border-color: var(--color-accent-red);
   box-shadow: 0 0 12px 0 var(--color-accent-red);
+}
+
+.card:active {
+  scale: 0.95;
 }
 
 .card__description {
@@ -218,6 +228,22 @@ html {
   font-size: 16px;
 }
 
+.appear {
+  animation: appear var(--transition-default) forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 /* Эффекты фона страницы */
 .particles {
   position: fixed;
@@ -245,7 +271,7 @@ html {
   }
 
   .card {
-    align-items: start;
     flex-direction: column;
+    align-items: start;
   }
 }

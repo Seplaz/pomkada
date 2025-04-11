@@ -27,16 +27,18 @@ randomButton.addEventListener('click', () => {
     randomMovie.description
   ));
   
+  cardsContainer.querySelector('.card').classList.add('appear');
+
   cardsContainer.scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });
 })
 
-// Кнопка добавить фильм
-const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
-addButton.querySelector('.button__title').textContent = 'Добавить фильм';
-buttonsContainer.append(addButton);
+// // Кнопка добавить фильм
+// const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
+// addButton.querySelector('.button__title').textContent = 'Добавить фильм';
+// buttonsContainer.append(addButton);
 
 // Создание карточки с фильмом
 const createCard = (image, name, year, rating, description) => {

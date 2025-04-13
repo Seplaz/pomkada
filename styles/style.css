@@ -1,16 +1,9 @@
 :root {
     /* Основные цвета */
     --color-bg-dark: #1A1A1A;
-    --color-bg-light: #FAFAFA;
-  
-    --color-text-light: #F8F4F0;
-    --color-text-dark: #2C3E50;
-  
+    --color-text-light: #FAFAFA;
     --color-accent-red: #8C2F39;
-    --color-accent-yellow: #F1C40F;
-    --color-accent-orange: #E67E22;
-    --color-accent-blue: #3498DB;
-  
+
     /* Дополнительно */
     --color-border: rgba(255, 255, 255, 0.1);
     --color-shadow: rgba(0, 0, 0, 0.2);
@@ -67,7 +60,7 @@ html {
 .intro__title {
   position: relative;
   z-index: 1;
-  color: var(--color-text-primary);
+  color: var(--color-text-light);
   font-weight: 700;
   font-size: 48px;
   user-select: none;
@@ -80,7 +73,8 @@ html {
 .intro__text {
   position: relative;
   z-index: 1;
-  color: var(--color-text-secondary);
+  opacity: 0.6;
+  color: var(--color-text-light);
   font-weight: 400;
   font-size: 16px;
   user-select: none;
@@ -97,7 +91,7 @@ html {
   z-index: 1;
   border: 1px solid var(--color-border);
   padding: 24px;
-  color: var(--color-text-primary);
+  color: var(--color-text-light);
   font-weight: 400;
   font-size: 16px;
   background-color: var(--color-bg-dark);
@@ -141,7 +135,9 @@ html {
   background-color: transparent;
   transition: background-color var(--transition-default), border var(--transition-default), border-radius var(--transition-default), scale var(--transition-default);
   cursor: pointer;
+  will-change: background-color, border, border-radius, scale;
   min-inline-size: 272px;
+
 }
 
 .button:hover {
@@ -155,7 +151,7 @@ html {
 }
 
 .button__title {
-  color: var(--color-text-primary);
+  color: var(--color-text-light);
   font-weight: 400;
   font-size: 16px;
   user-select: none;
@@ -184,6 +180,7 @@ html {
   transition: box-shadow var(--transition-default), border-color var(--transition-default), scale var(--transition-default);
   cursor: pointer;
   user-select: none;
+  will-change: contents, box-shadow, border-color, scale;
   inline-size: 100%;
 }
 

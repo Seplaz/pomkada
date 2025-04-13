@@ -6,40 +6,6 @@ const cardTemplate = document.querySelector('#card-template').content;
 const cardsContainer = document.querySelector('.cards');
 const buttonsContainer = document.querySelector('.buttons');
 
-// Кнопка рандом
-const randomButton = buttonTemplate.querySelector('.button').cloneNode(true);
-randomButton.querySelector('.button__title').textContent = 'Выбрать случайный фильм';
-buttonsContainer.append(randomButton);
-
-randomButton.addEventListener('click', () => {
-  if (cardsContainer.firstChild) {
-    cardsContainer.firstChild.remove();
-  }
-
-  const randomIndex = Math.floor(Math.random() * movies.length);
-  const randomMovie = movies[randomIndex];
-  
-  cardsContainer.append(createCard(
-    randomMovie.image,
-    randomMovie.name,
-    randomMovie.year,
-    randomMovie.rating,
-    randomMovie.description
-  ));
-  
-  cardsContainer.querySelector('.card').classList.add('appear');
-
-  cardsContainer.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-})
-
-// // Кнопка добавить фильм
-// const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
-// addButton.querySelector('.button__title').textContent = 'Добавить фильм';
-// buttonsContainer.append(addButton);
-
 // Создание карточки с фильмом
 const createCard = (image, name, year, rating, description) => {
   const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
@@ -56,6 +22,40 @@ const createCard = (image, name, year, rating, description) => {
   })
   return cardElement;
 }
+
+// Кнопка рандом
+const randomButton = buttonTemplate.querySelector('.button').cloneNode(true);
+randomButton.querySelector('.button__title').textContent = 'Выбрать случайный фильм';
+buttonsContainer.append(randomButton);
+
+randomButton.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * movies.length);
+  const randomMovie = movies[randomIndex];
+
+  if (cardsContainer.firstChild) {
+    cardsContainer.firstChild.remove();
+  }
+
+  cardsContainer.append(createCard(
+    randomMovie.image,
+    randomMovie.name,
+    randomMovie.year,
+    randomMovie.rating,
+    randomMovie.description
+  ));
+
+  cardsContainer.querySelector('.card').classList.add('appear');
+
+  cardsContainer.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+})
+
+// // Кнопка добавить фильм
+// const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
+// addButton.querySelector('.button__title').textContent = 'Добавить фильм';
+// buttonsContainer.append(addButton);
 
 // Вызов всех карточек из movies.js
 // movies.forEach((item) => {

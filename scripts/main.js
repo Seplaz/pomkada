@@ -25,7 +25,7 @@ const createCard = (image, name, year, rating, description) => {
 
 // Кнопка рандом
 const randomButton = buttonTemplate.querySelector('.button').cloneNode(true);
-randomButton.querySelector('.button__title').textContent = 'Выбрать случайный фильм';
+randomButton.querySelector('.button__title').textContent = 'Нам повезёт';
 buttonsContainer.append(randomButton);
 
 randomButton.addEventListener('click', () => {

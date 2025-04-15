@@ -62,7 +62,7 @@ html {
   z-index: 1;
   color: var(--color-text-light);
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   user-select: none;
 }
 
@@ -124,20 +124,21 @@ html {
 
 .button {
   display: flex;
-  flex: 1;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
   border: none;
   border-inline: 1px solid var(--color-border);
   border-block: 1px solid transparent;
   padding: 24px;
   background-color: transparent;
-  transition: background-color var(--transition-default), border var(--transition-default), border-radius var(--transition-default), scale var(--transition-default);
+  transition: background-color var(--transition-default), 
+              border var(--transition-default), 
+              border-radius var(--transition-default), 
+              scale var(--transition-default);
   cursor: pointer;
   will-change: background-color, border, border-radius, scale;
   min-inline-size: 272px;
-
 }
 
 .button:hover {
@@ -177,7 +178,9 @@ html {
   border-radius: 16px;
   padding: 24px;
   background-color: var(--color-bg-dark);
-  transition: box-shadow var(--transition-default), border-color var(--transition-default), scale var(--transition-default);
+  transition: box-shadow var(--transition-default), 
+              border-color var(--transition-default), 
+              scale var(--transition-default);
   cursor: pointer;
   user-select: none;
   will-change: contents, box-shadow, border-color, scale;
@@ -265,6 +268,10 @@ html {
 @media (max-width: 425px) {
   .input {
     flex-wrap: wrap;
+  }
+
+  .button {
+    flex: 1;
   }
 
   .card {

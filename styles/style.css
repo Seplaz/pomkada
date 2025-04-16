@@ -238,7 +238,7 @@ html {
 }
 
 .year, .rating {
-  border: 1px solid var(--color-accent-red);
+  border: 1px solid var(--color-border);
   padding: 8px 16px;
   border-radius: 16px;
 }

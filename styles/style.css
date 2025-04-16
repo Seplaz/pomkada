@@ -3,11 +3,19 @@
     --color-bg-dark: #1A1A1A;
     --color-text-light: #FAFAFA;
     --color-accent-red: #8C2F39;
-
+    
+    /* Размеры отступов */
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    
+    /* Шрифты */
+    --font-size-sm: 16px;
+    --font-size-md: 24px;
+    --font-size-lg: 40px;
+    
     /* Дополнительно */
     --color-border: rgba(255, 255, 255, 0.1);
-    --color-shadow: rgba(0, 0, 0, 0.2);
-
     --transition-default: 0.3s ease;
 }
 
@@ -18,9 +26,9 @@ html {
 .page {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: var(--space-lg);
   margin: 0 auto;
-  padding: 24px;
+  padding: var(--space-md);
   color: var(--color-text-light);
   font-family: "Geist", sans-serif;
   background-color: var(--color-bg-dark);
@@ -45,15 +53,15 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 48px;
+  gap: var(--space-lg);
 }
 
 .intro {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-sm);
   border-inline: 1px solid var(--color-border);
-  padding: 24px;
+  padding: var(--space-md);
 
 }
 
@@ -62,7 +70,7 @@ html {
   z-index: 1;
   color: var(--color-text-light);
   font-weight: 700;
-  font-size: 40px;
+  font-size: var(--font-size-lg);
   user-select: none;
 }
 
@@ -76,14 +84,14 @@ html {
   opacity: 0.6;
   color: var(--color-text-light);
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-size-sm);
   user-select: none;
 }
 
 /* Ввод фильма */
-.input {
+/* .input {
   display: flex;
-  gap: 24px;
+  gap: var(--space-md);
   background-color: transparent;
 }
 
@@ -110,7 +118,7 @@ html {
   border-color: var(--color-accent-red);
   box-shadow: 0 0 12px 0 var(--color-accent-red);
   outline: none;
-}
+} */
 
 /* Контейнер с кнопками и сами кнопки */
 .buttons {
@@ -118,7 +126,7 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: start;
-  gap: 24px;
+  gap: var(--space-md);
   inline-size: 100%;
 }
 
@@ -127,11 +135,11 @@ html {
   justify-content: space-between;
   flex: 1;
   align-items: center;
-  gap: 24px;
+  gap: var(--space-md);
   border: none;
   border-inline: 1px solid var(--color-border);
   border-block: 1px solid transparent;
-  padding: 24px;
+  padding: var(--space-md);
   background-color: transparent;
   transition: background-color var(--transition-default), 
               border var(--transition-default), 
@@ -140,22 +148,22 @@ html {
   cursor: pointer;
   will-change: background-color, border, border-radius, scale;
   min-inline-size: 272px;
-}
 
-.button:hover {
-  border-radius: 16px;
-  border-block: 1px solid var(--color-border);
-  background-color: var(--color-border);
-}
-
-.button:active {
-  scale: 0.95;
+    &:hover {
+    border-radius: 16px;
+    border-block: 1px solid var(--color-border);
+    background-color: var(--color-border);
+  }
+  
+    &:active {
+    scale: 0.95;
+  }
 }
 
 .button__title {
   color: var(--color-text-light);
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-size-sm);
   user-select: none;
   text-align: start;
 }
@@ -170,16 +178,16 @@ html {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: var(--space-md);
 }
 
 .card {
   position: relative;
   display: flex;
-  gap: 24px;
+  gap: var(--space-md);
   border: 1px solid var(--color-border);
   border-radius: 16px;
-  padding: 24px;
+  padding: var(--space-md);
   background-color: var(--color-bg-dark);
   transition: box-shadow var(--transition-default), 
               border-color var(--transition-default), 
@@ -188,15 +196,15 @@ html {
   user-select: none;
   will-change: contents, box-shadow, border-color, scale;
   inline-size: 100%;
-}
 
-.card:hover {
-  border-color: var(--color-accent-red);
-  box-shadow: 0 0 12px 0 var(--color-accent-red);
-}
-
-.card:active {
-  scale: 0.95;
+    &:hover {
+    border-color: var(--color-accent-red);
+    box-shadow: 0 0 16px 0 var(--color-accent-red);
+  }
+  
+    &:active {
+    scale: 0.95;
+  }
 }
 
 .card__description {
@@ -215,7 +223,7 @@ html {
 .card__title {
   color: var(--color-text-light);
   font-weight: 700;
-  font-size: 24px;
+  font-size: var(--font-size-md);
 }
 
 .card__text-container {
@@ -228,7 +236,7 @@ html {
   opacity: 0.6;
   color: var(--color-text-light);
   font-weight: 400;
-  font-size: 16px;
+  font-size: var(--font-size-sm);
 }
 
 .appear {
@@ -269,9 +277,9 @@ html {
 }
 
 @media (max-width: 425px) {
-  .input {
+  /* .input {
     flex-wrap: wrap;
-  }
+  } */
 
   .card {
     flex-direction: column;

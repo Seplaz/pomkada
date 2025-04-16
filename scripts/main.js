@@ -25,7 +25,7 @@ const createCard = (image, name, year, rating, description) => {
 
 // Кнопка рандом топ 100 ужастиков
 const randomHorrorButton = buttonTemplate.querySelector('.button').cloneNode(true);
-randomHorrorButton.querySelector('.button__title').textContent = 'Топ 100 ужастиков';
+randomHorrorButton.querySelector('.button__title').textContent = 'Рандомный ужастик';
 buttonsContainer.append(randomHorrorButton);
 
 randomHorrorButton.addEventListener('click', () => {
@@ -54,12 +54,12 @@ randomHorrorButton.addEventListener('click', () => {
 
 // Кнопка рандом топ 250 лучших фильмов
 const randomMovieButton = buttonTemplate.querySelector('.button').cloneNode(true);
-randomMovieButton.querySelector('.button__title').textContent = 'Топ 250 лучших';
+randomMovieButton.querySelector('.button__title').textContent = 'Рандомный фильм';
 buttonsContainer.append(randomMovieButton);
 
 randomMovieButton.addEventListener('click', () => {
-  const randomIndex = Math.floor(Math.random() * bestMovies.length);
-  const randomMovie = bestMovies[randomIndex];
+  const randomIndex = Math.floor(Math.random() *  randomMovies.length);
+  const randomMovie =  randomMovies[randomIndex];
 
   if (cardsContainer.firstChild) {
     cardsContainer.firstChild.remove();

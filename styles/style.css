@@ -117,7 +117,7 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
   gap: 24px;
   inline-size: 100%;
 }
@@ -125,6 +125,7 @@ html {
 .button {
   display: flex;
   justify-content: space-between;
+  flex: 1;
   align-items: center;
   gap: 24px;
   border: none;
@@ -270,10 +271,6 @@ html {
 @media (max-width: 425px) {
   .input {
     flex-wrap: wrap;
-  }
-
-  .button {
-    flex: 1;
   }
 
   .card {

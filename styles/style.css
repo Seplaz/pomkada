@@ -89,7 +89,7 @@ html {
 }
 
 /* Ввод фильма */
-/* .input {
+.form {
   display: flex;
   gap: var(--space-md);
   background-color: transparent;
@@ -105,20 +105,20 @@ html {
   background-color: var(--color-bg-dark);
   transition: box-shadow var(--transition-default), border-color var(--transition-default);
   inline-size: 100%;
-}
 
-.input__text::placeholder {
-  opacity: 0.6;
-  color: var(--color-text-light);
-  font-weight: 400;
-  font-size: 16px;
+  &::placeholder {
+    opacity: 0.6;
+    color: var(--color-text-light);
+    font-weight: 400;
+    font-size: 16px;
+  }
+  
+  &:focus {
+    border-color: var(--color-accent-red);
+    box-shadow: 0 0 16px 0 var(--color-accent-red);
+    outline: none;
+  }
 }
-
-.input__text:focus {
-  border-color: var(--color-accent-red);
-  box-shadow: 0 0 12px 0 var(--color-accent-red);
-  outline: none;
-} */
 
 /* Контейнер с кнопками и сами кнопки */
 .buttons {
@@ -147,7 +147,6 @@ html {
               scale var(--transition-default);
   cursor: pointer;
   will-change: background-color, border, border-radius, scale;
-  min-inline-size: 272px;
 
     &:hover {
     border-radius: 16px;
@@ -210,8 +209,7 @@ html {
 .card__description {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 8px;
+  gap: 24px;
 }
 
 .card__image {
@@ -238,9 +236,10 @@ html {
 }
 
 .year, .rating {
-  border: 1px solid var(--color-border);
   padding: 8px 16px;
-  border-radius: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-border);
 }
 
 .card__text {
@@ -288,10 +287,9 @@ html {
 }
 
 @media (max-width: 425px) {
-  /* .input {
+  .form {
     flex-wrap: wrap;
-  } */
-
+  }
   .card {
     flex-direction: column;
     align-items: start;

@@ -5,6 +5,12 @@ const cardTemplate = document.querySelector('#card-template').content;
 // Контейнеры
 const cardsContainer = document.querySelector('.cards');
 const buttonsContainer = document.querySelector('.buttons');
+const formContainer = document.querySelector('.form');
+
+// Кнопка добавить фильм
+const addFilmButton = buttonTemplate.querySelector('.button').cloneNode(true);
+addFilmButton.querySelector('.button__title').textContent = 'Добавить';
+formContainer.append(addFilmButton);
 
 // Создание карточки с фильмом
 const createCard = (image, name, year, rating, description) => {
@@ -81,12 +87,7 @@ randomMovieButton.addEventListener('click', () => {
   });
 })
 
-// // Кнопка добавить фильм
-// const addButton = buttonTemplate.querySelector('.button').cloneNode(true);
-// addButton.querySelector('.button__title').textContent = 'Добавить фильм';
-// buttonsContainer.append(addButton);
-
 // Вызов всех карточек из movies.js
-// movies.forEach((item) => {
+// randomMovies.forEach((item) => {
 //   cardsContainer.append(createCard(item.image, item.name, item.year, item.rating, item.description));
 // })

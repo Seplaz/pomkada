@@ -52,10 +52,17 @@ randomHorrorButton.addEventListener('click', () => {
 
   cardsContainer.querySelector('.card').classList.add('appear');
 
-  cardsContainer.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
+  if (window.innerWidth <= 425) {
+      cardsContainer.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
+  // cardsContainer.scrollIntoView({
+  //   behavior: 'smooth',
+  //   block: 'start'
+  // });
 })
 
 // Кнопка рандом топ 250 лучших фильмов
@@ -81,10 +88,17 @@ randomMovieButton.addEventListener('click', () => {
 
   cardsContainer.querySelector('.card').classList.add('appear');
 
-  cardsContainer.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
+    if (window.innerWidth <= 425) {
+      cardsContainer.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+
+  // cardsContainer.scrollIntoView({
+  //   behavior: 'smooth',
+  //   block: 'start'
+  // });
 })
 
 // Вызов всех карточек из movies.js

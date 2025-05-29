@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomkada</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <img class="logo" src="./images/logo.svg" alt="Логотип Помкада">
+    </header>
+
+    <main class="main">
+      <div class="intro">
+        <h1 class="intro__title">Случайности <span class="accent-text">не случайны.</span></h1>
+        <p class="intro__text">Сервис для подбора фильмов на вечер.</p>
+      </div>
+
+      <div class="content"></div>
+    </main>
+
+    <footer class="footer">Made with <span class="accent-text">❤</span></footer>
+
+    <template id="button-template">
+      <button class="button" type="button">
+        <span class="button__title"></span>
+      </button>
+    </template>
+
+    <template id="card-template">
+      <div class="card scale">
+        <img class="card__image" src="" alt="">
+        <div class="card__description-container">
+          <h2 class="card__title"></h2>
+            <div class="card__details">
+              <p class="card__year"></p>
+              <p class="card__rating"></p>
+            </div>
+          <p class="card__description"></p>
+        </div>
+      </div>
+    </template>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

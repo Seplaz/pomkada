@@ -1,0 +1,9 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accent-text {
+  color: var(--accent-color);
+}

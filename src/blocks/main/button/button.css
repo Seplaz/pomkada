@@ -6,6 +6,7 @@
   transition: box-shadow var(--transition-default),
               border-color var(--transition-default),
               scale var(--transition-default);
+  cursor: pointer;
   inline-size: fit-content;
 
   &:hover {

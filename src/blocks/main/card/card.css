@@ -8,6 +8,7 @@
   transition: box-shadow var(--transition-default), 
               border-color var(--transition-default), 
               scale var(--transition-default);
+  cursor: pointer;
   
   &:hover {
     border-color: var(--accent-color);

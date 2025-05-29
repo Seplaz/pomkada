@@ -3,4 +3,5 @@
   font-size: var(--font-size-base);
   margin-top: auto;
   color: var(--text-secondary-color);
+  padding: 24px;
 }

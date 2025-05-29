@@ -13,49 +13,5 @@
   background-color: var(--dark-color);
   min-inline-size: 320px;
   max-inline-size: 1024px;
-  block-size: 100vh;
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-}
-h2 {
-  font-size: var(--font-size-h2);
-}
-h3 {
-  font-size: var(--font-size-h3);
-}
-h4 {
-  font-size: var(--font-size-h4);
-}
-h5 {
-  font-size: var(--font-size-h5);
-}
-h6 {
-  font-size: var(--font-size-h6);
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: var(--font-size-base-mobile);
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  h4 {
-    font-size: 1.25rem;
-  }
-  h5 {
-    font-size: 1.125rem;
-  }
-  h6 {
-    font-size: 1rem;
-  }
+  block-size: 100svh;
 }

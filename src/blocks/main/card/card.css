@@ -35,7 +35,7 @@
 
 .card__title {
   font-weight: 700;
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-l);
 }
 
 .card__details {
@@ -47,14 +47,14 @@
   border: 2px solid var(--border-color);
   border-radius: 12px;
   padding: 8px 16px;
-  background-color: var(--component-badge-bg-color);
   color: var(--text-secondary-color);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-s);
+  background-color: var(--component-badge-bg-color);
 }
 
 .card__description {
   color: var(--text-secondary-color);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-s);
 }
 
 .scale {

@@ -4,6 +4,15 @@
   gap: 12px;
 }
 
-.accent-text {
+.intro__title {
+  font-size: var(--font-size-xxl);
+}
+
+.intro__text {
+  font-size: var(--font-size-s);
+} 
+
+.intro__title-accent {
   color: var(--accent-color);
+  text-shadow: 0 0 16px var(--accent-color);
 }

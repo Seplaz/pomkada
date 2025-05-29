@@ -1,3 +1,6 @@
 .header {
-  block-size: 48px;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
 }

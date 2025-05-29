@@ -17,7 +17,7 @@ button.addEventListener('click', () => {
   content.append(card);
 
   if (window.innerWidth <= 425) {
-    card.scrollIntoView({
+    content.scrollIntoView({
         behavior: 'smooth',
         block: 'start'
       });

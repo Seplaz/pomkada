@@ -22,3 +22,9 @@
   font-weight: 700;
   font-size: var(--font-size-m);
 }
+
+@media (max-width: 425px) {
+  .button {
+    inline-size: 100%;
+  }
+}

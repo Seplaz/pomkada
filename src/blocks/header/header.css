@@ -4,3 +4,8 @@
   box-sizing: border-box;
   padding: 24px;
 }
+
+.logo {
+  user-select: none;
+  pointer-events: none;
+}

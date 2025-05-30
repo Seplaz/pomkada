@@ -1,6 +1,6 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 24px;
   box-sizing: border-box;
+  padding: 24px;
 }

@@ -3,8 +3,11 @@ import { movies } from './components/movies.js';
 import { createButton } from './components/button.js';
 import { createCard } from './components/card.js';
 
+const main = document.querySelector('.main');
 const content = document.querySelector('.content');
-const button = createButton('Испытать удачу');
+const button = createButton('Выбор судьбы');
+
+content.append(button);
 
 button.addEventListener('click', () => {
   const randomMovie = movies[Math.floor(Math.random() * movies.length)];
@@ -23,5 +26,3 @@ button.addEventListener('click', () => {
       });
     };
 });
-
-content.append(button);

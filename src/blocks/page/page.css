@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding: 24px;
   color: var(--text-main-color);
   font-family: "Geist", sans-serif;
   font-weight: 400;
@@ -13,7 +14,8 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   max-inline-size: 1024px;
-  block-size: 100svh;
+  min-block-size: 100svh;
 }

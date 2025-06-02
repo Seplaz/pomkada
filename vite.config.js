@@ -7,10 +7,6 @@ export default defineConfig({
     outDir: '../dist',
     emptyOutDir: true,
   },
-  server: {
-    port: 8081,
-    open: true
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')

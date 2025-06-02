@@ -1,10 +1,10 @@
 @import url('@/vendor/globals.css');
 @import url('@/vendor/fonts.css');
 @import url('@/vendor/variables.css');
-@import url('@/blocks/page/page.css');
-@import url('@/blocks/header/header.css');
-@import url('@/blocks/main/main.css');
-@import url('@/blocks/main/button/button.css');
-@import url('@/blocks/main/card/card.css');
-@import url('@/blocks/footer/footer.css');
-@import url('@/blocks/animations/animations.css');
+@import url('@/styles/page/page.css');
+@import url('@/styles/header/header.css');
+@import url('@/styles/main/main.css');
+@import url('@/styles/main/button/button.css');
+@import url('@/styles/main/card/card.css');
+@import url('@/styles/footer/footer.css');
+@import url('@/styles/animations/animations.css');

@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   gap: 24px;
-  block-size: 100%;
   padding: 24px;
+  block-size: 100%;
+  inline-size: 100%;
 }

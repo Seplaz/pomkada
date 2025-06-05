@@ -4,7 +4,7 @@ import { createButton } from './components/button.js';
 import { createCard } from './components/card.js';
 
 const main = document.querySelector('.main');
-const button = createButton('Выбор судьбы');
+const button = createButton('Сделать выбор');
 
 main.append(button);
 

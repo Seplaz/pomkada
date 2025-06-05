@@ -5,7 +5,7 @@
   border-radius: 24px;
   padding: 24px;
   background-color: var(--component-main-color);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(8px);
   transition: box-shadow var(--transition-default), 
               border-color var(--transition-default), 
               scale var(--transition-default);

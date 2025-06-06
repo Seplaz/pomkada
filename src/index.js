@@ -4,7 +4,7 @@ import { createButton } from './components/button.js';
 import { createCard } from './components/card.js';
 
 const main = document.querySelector('.main');
-const button = createButton('Сделать выбор');
+const button = createButton('Случайный фильм');
 
 main.append(button);
 
@@ -15,6 +15,8 @@ button.addEventListener('click', () => {
   if (previousCard) {
     previousCard.remove();
   }
+
+  button.querySelector('.button__title').textContent = 'Хочу другой фильм';
 
   main.append(card);
 

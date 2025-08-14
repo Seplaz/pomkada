@@ -1,0 +1,7 @@
+.header {
+  justify-self: start;
+}
+
+.logo {
+  user-select: none;
+}

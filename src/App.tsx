@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { type Movie } from "./data/Movies.interface";
+import data from "./data/movies.json";
+import { Header } from "./components/Header/Header";
+import { Button } from "./components/Button/Button";
+import { Card } from "./components/Card/Card";
+import { Footer } from "./components/Footer/Footer";
+import { useState, useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [currentMovie, setCurrentMovie] = useState<Movie | null>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  const handleButtonClick = () => {
+    const randomMovie = data[Math.floor(Math.random() * data.length)];
+    setCurrentMovie(randomMovie);
+  };
+
+  useLayoutEffect(() => {
+    if (currentMovie && cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        {
+          opacity: 0,
+          height: 0,
+        },
+        {
+          opacity: 1,
+          height: "auto",
+          duration: 0.4,
+          ease: "power1.out",
+        }
+      );
+    }
+  }, [currentMovie]);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className="main">
+        <Button title={"Рандомый фильм"} onClick={handleButtonClick} />
+        {currentMovie && (
+          <Card
+            ref={cardRef}
+            image={currentMovie.image}
+            title={currentMovie.title}
+            rating={currentMovie.rating}
+            year={currentMovie.year}
+            description={currentMovie.description}
+            onClick={() => {}}
+          />
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <Footer text={'Made in 2025 with'} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

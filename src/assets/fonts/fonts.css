@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Geist';
+  src: url('./Geist.ttf') format('truetype-variations');
+  font-display: swap;
+  font-weight: 100 900;
+}

@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 128px;
+  gap: 48px;
   max-width: 1280px;
   padding: 24px;
   text-align: center;
@@ -30,6 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 96px;
+  gap: 24px;
   block-size: 100%;
 }

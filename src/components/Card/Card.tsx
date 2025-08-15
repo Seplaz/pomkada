@@ -1,9 +1,8 @@
 import styles from "./Card.module.css";
-import { useRef, useLayoutEffect, type RefObject } from "react";
+import { useRef, useLayoutEffect, forwardRef } from "react";
 import gsap from "gsap";
 
 type CardProps = {
-  ref: RefObject<HTMLDivElement | null>;
   image: string;
   title: string;
   rating: string;
@@ -12,8 +11,8 @@ type CardProps = {
   onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
 };
 
-export const Card = (props: CardProps) => {
-  const { ref, image, title, rating, year, description, onClick } = props;
+export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
+  const { image, title, rating, year, description, onClick } = props;
   const imageRef = useRef<HTMLImageElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const ratingRef = useRef<HTMLParagraphElement | null>(null);
@@ -124,10 +123,11 @@ export const Card = (props: CardProps) => {
           >{`Рейтинг: ${rating}`}</p>
           <p ref={yearRef} className={styles.rating}>{`Год: ${year}`}</p>
         </div>
-        <p ref={descriptionRef} className={styles.description}>
+
+      </div>
+              <p ref={descriptionRef} className={styles.description}>
           {description}
         </p>
-      </div>
     </div>
   );
-};
+});

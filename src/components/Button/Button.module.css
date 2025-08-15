@@ -10,7 +10,7 @@
   background-color: rgba(235, 235, 235, 0.1);
   transition: border 0.2s ease-out, box-shadow 0.2s ease-out;
   inline-size: fit-content;
-  justify-self: start;
+
 
   &:hover {
     border: 2px solid rgba(140, 47, 57, 1);

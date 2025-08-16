@@ -27,80 +27,45 @@ export const Card = forwardRef<HTMLDivElement, CardProps>((props, ref) => {
       yearRef.current &&
       descriptionRef.current
     ) {
-      gsap.fromTo(
+
+      gsap.killTweensOf([
         imageRef.current,
-        {
-          opacity: 0,
-          scale: 0,
-        },
-        {
-          opacity: 1,
-          scale: 1,
-          delay: 0.3,
-          duration: 0.2,
-          ease: "power1.out",
-        }
-      );
-
-      gsap.fromTo(
         titleRef.current,
-        {
-          opacity: 0,
-          y: -25,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          delay: 0.3,
-          duration: 0.2,
-          ease: "power1.out",
-        }
-      );
-
-      gsap.fromTo(
         ratingRef.current,
-        {
-          opacity: 0,
-          y: -25,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          delay: 0.6,
-          duration: 0.2,
-          ease: "power1.out",
-        }
-      );
-
-      gsap.fromTo(
         yearRef.current,
-        {
-          opacity: 0,
-          y: -25,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          delay: 0.9,
-          duration: 0.2,
-          ease: "power1.out",
-        }
-      );
+        descriptionRef.current
+      ]);
 
-      gsap.fromTo(
-        descriptionRef.current,
-        {
-          opacity: 0,
-          y: -25,
-        },
-        {
-          opacity: 1,
-          y: 0,
-          delay: 1.2,
-          duration: 0.2,
-          ease: "power1.out",
-        }
-      );
+      const tl = gsap.timeline();
+      tl.fromTo(
+        imageRef.current,
+        { opacity: 0, scale: 0 },
+        { opacity: 1, scale: 1, duration: 0.2, delay: 0.2, ease: "power1.out" }
+      )
+        .fromTo(
+          titleRef.current,
+          { opacity: 0, y: -25 },
+          { opacity: 1, y: 0, duration: 0.2, ease: "power1.out" },
+          "+=0.05"
+        )
+        .fromTo(
+          ratingRef.current,
+          { opacity: 0, y: -25 },
+          { opacity: 1, y: 0, duration: 0.2, ease: "power1.out" },
+          "+=0.05"
+        )
+        .fromTo(
+          yearRef.current,
+          { opacity: 0, y: -25 },
+          { opacity: 1, y: 0, duration: 0.2, ease: "power1.out" },
+          "+=0.05"
+        )
+        .fromTo(
+          descriptionRef.current,
+          { opacity: 0, y: -25 },
+          { opacity: 1, y: 0, duration: 0.2, ease: "power1.out" },
+          "+=0.05"
+        );
     }
   }, [image, title, rating, year, description]);
 

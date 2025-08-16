@@ -10,7 +10,7 @@ body {
   background-image: url("/background.png");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: cover;
+  background-size: contain;
   min-block-size: 100svb;
 }
 
@@ -30,6 +30,7 @@ body {
 .main {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   align-items: center;
   gap: 24px;
   min-block-size: 100%;
